@@ -29,7 +29,7 @@ export default function Hero() {
             Discover amazing products at unbeatable prices. Limited time deals available.
           </p>
 
-          <Link to="/ProductListing" className="bg-red-500 px-6 py-3 rounded-lg text-lg font-semibold hover:bg-red-600 transition">
+          <Link to="/ProductListing" className="bg-red-500 animate-pulse px-6 py-3 rounded-lg text-lg font-semibold hover:bg-red-600 transition">
             Start Shopping
           </Link>
         </div>
