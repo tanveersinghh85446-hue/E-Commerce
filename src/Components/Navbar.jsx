@@ -1,62 +1,3 @@
-// import React, { useState } from 'react'
-// import { Link } from "react-router-dom";
-// import { BsBagHeart } from "react-icons/bs";
-// import { TiShoppingCart } from "react-icons/ti";
-// import { HiMenu, HiX } from "react-icons/hi";
-// import { CgProfile } from "react-icons/cg";
-
-// export default function Navbar() {
-
-//   const [open, setOpen] = useState(false);
-
-//   return (
-//     <nav className='bg-amber-300 shadow-md px-6 py-4'>
-
-//       <div className='flex justify-between items-center'>
-
-//         {/* Logo */}
-//         <div className='text-xl font-bold flex'>
-//           <Link to="/">Cartify</Link>
-//           <span><TiShoppingCart className='mb-1 text-white text-2xl' /></span>
-//         </div>
-
-//         {/* Desktop Menu */}
-//         <div className='hidden md:flex items-center gap-8 text-lg'>
-//           <Link to="/">Home</Link>
-//           <Link to="/wishlist" className='text-2xl'><BsBagHeart /></Link>
-//           <Link to="/cart" className='text-2xl'><TiShoppingCart /></Link>
-//           <Link to="/productlisting">Products</Link>
-//           <Link to="/productdetails">Product Details</Link>
-//           <Link to="/Profile"><CgProfile /></Link>
-
-
-//         </div>
-
-//         {/* Mobile Menu Button */}
-//         <div className='md:hidden text-3xl cursor-pointer' onClick={() => setOpen(!open)}>
-//           {open ? <HiX /> : <HiMenu />}
-//         </div>
-
-//       </div>
-
-//       {/* Mobile Menu */}
-//       {open && (
-//         <div className='flex flex-col items-center gap-6 mt-6 text-lg md:hidden'>
-//           <Link to="/" onClick={() => setOpen(false)}>Home</Link>
-//           <Link to="/productlisting" onClick={() => setOpen(false)}>Products</Link>
-//           <Link to="/productdetails" onClick={() => setOpen(false)}>Product Details</Link>
-//           <Link to="/wishlist" onClick={() => setOpen(false)} className='text-2xl'><BsBagHeart /></Link>
-//           <Link to="/cart" onClick={() => setOpen(false)} className='text-2xl'><TiShoppingCart /></Link>
-//           <Link to="/Profile" onClick={() => setOpen(false)}><CgProfile /></Link>
-
-//         </div>
-//       )}
-
-//     </nav>
-//   )
-// }
-
-
 import React, { useState, useEffect } from 'react'
 import { Link, useLocation } from "react-router-dom";
 import { BsBagHeart } from "react-icons/bs";
@@ -91,18 +32,6 @@ export default function Navbar() {
           : 'bg-stone-950'
         }`}
     >
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@300;400;500&display=swap');
-        .font-playfair { font-family: 'Playfair Display', serif; }
-        .font-dm { font-family: 'DM Sans', sans-serif; }
-        .nav-underline::after {
-          content: ''; position: absolute; bottom: 4px; left: 50%;
-          transform: translateX(-50%); width: 0; height: 1.5px;
-          background: #f59e0b; transition: width 0.3s ease; border-radius: 2px;
-        }
-        .nav-underline:hover::after, .nav-underline.active::after { width: 55%; }
-      `}</style>
-
       <div className="font-dm max-w-7xl mx-auto px-6 h-17 flex items-center justify-between">
 
         {/* Logo */}
@@ -140,7 +69,6 @@ export default function Navbar() {
             <Link to="/cart" title="Cart"
               className="relative flex items-center justify-center w-10 h-10 rounded-xl text-stone-400 text-[1.35rem] hover:text-amber-400 hover:bg-amber-400/10 hover:-translate-y-0.5 transition-all duration-200 no-underline">
               <TiShoppingCart />
-              <span className="absolute top-1.5 right-1.5 bg-amber-400 text-stone-950 text-[0.55rem] font-bold w-3.5 h-3.5 rounded-full flex items-center justify-center">3</span>
             </Link>
             <Link to="/Profile" title="Profile"
               className="flex items-center justify-center w-10 h-10 rounded-xl text-stone-400 text-[1.35rem] hover:text-amber-400 hover:bg-amber-400/10 hover:-translate-y-0.5 transition-all duration-200 no-underline">
@@ -184,7 +112,6 @@ export default function Navbar() {
             <Link to="/cart"
               className="relative flex items-center justify-center w-10 h-10 rounded-xl text-stone-400 text-[1.35rem] hover:text-amber-400 hover:bg-amber-400/10 transition-all duration-200 no-underline">
               <TiShoppingCart />
-              <span className="absolute top-1.5 right-1.5 bg-amber-400 text-stone-950 text-[0.55rem] font-bold w-3.5 h-3.5 rounded-full flex items-center justify-center">3</span>
             </Link>
             <Link to="/Profile"
               className="flex items-center justify-center w-10 h-10 rounded-xl text-stone-400 text-[1.35rem] hover:text-amber-400 hover:bg-amber-400/10 transition-all duration-200 no-underline">
